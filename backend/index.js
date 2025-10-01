@@ -1,3 +1,4 @@
+dotenv.config({});
 import express from "express";
 import cookieParser from "cookie-parser"; 
 import cors from "cors";
@@ -7,7 +8,6 @@ import userRoutes from "./routes/user.route.js";
 import companyRoutes from "./routes/company.route.js";
 import jobRoutes from "./routes/job.route.js";
 import applicationRoutes from "./routes/application.route.js";
-dotenv.config({});
 const app = express();
 
 app.use(express.json());
