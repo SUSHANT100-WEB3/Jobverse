@@ -39,14 +39,14 @@ const Job = ({job}) => {
                 <h1 className='font-bold text-lg my-2'>{job?.title}</h1>
                 <p className='text-sm text-gray-600'>{job?.description}</p>
             </div>
-            <div className='flex items-center gap-2 mt-4'>
-                <Badge className={'text-blue-700 font-bold'} variant="ghost">{job?.position} Positions</Badge>
-                <Badge className={'text-[#F83002] font-bold'} variant="ghost">{job?.jobType}</Badge>
-                <Badge className={'text-[#7209b7] font-bold'} variant="ghost">{job?.salary}LPA</Badge>
+            <div className='flex flex-wrap items-center gap-2 mt-4'>
+                <Badge className={'text-blue-700 font-bold text-xs'} variant="ghost">{job?.position} Positions</Badge>
+                <Badge className={'text-[#F83002] font-bold text-xs'} variant="ghost">{job?.jobType}</Badge>
+                <Badge className={'text-[#7209b7] font-bold text-xs'} variant="ghost">{job?.salary}LPA</Badge>
             </div>
-            <div className='flex items-center gap-4 mt-4'>
-                <Button onClick={()=> navigate(`/description/${job?._id}`)} variant="outline">Details</Button>
-                <Button className="bg-[#7209b7]">Save For Later</Button>
+            <div className='flex flex-col sm:flex-row items-center gap-2 sm:gap-4 mt-4'>
+                <Button onClick={()=> navigate(`/description/${job?._id}`)} variant="outline" className="w-full sm:w-auto">Details</Button>
+                <Button className="bg-[#7209b7] w-full sm:w-auto">Save For Later</Button>
             </div>
         </div>
     )

@@ -14,10 +14,10 @@ const LatestJobCards = ({job}) => {
                 <h1 className='font-bold text-lg my-2 bg-gradient-to-r from-indigo-300 to-fuchsia-300 bg-clip-text text-transparent'>{job?.title}</h1>
                 <p className='text-sm text-muted-foreground'>{job?.description}</p>
             </div>
-            <div className='flex items-center gap-2 mt-4'>
-                <Badge className={'font-bold border-border/60 bg-background/40 backdrop-blur'} variant="outline">{job?.position} Positions</Badge>
-                <Badge className={'font-bold border-border/60 bg-background/40 backdrop-blur'} variant="outline">{job?.jobType}</Badge>
-                <Badge className={'font-bold border-border/60 bg-background/40 backdrop-blur'} variant="outline">{job?.salary}LPA</Badge>
+            <div className='flex flex-wrap items-center gap-2 mt-4'>
+                <Badge className={'font-bold border-border/60 bg-background/40 backdrop-blur text-xs'} variant="outline">{job?.position} Positions</Badge>
+                <Badge className={'font-bold border-border/60 bg-background/40 backdrop-blur text-xs'} variant="outline">{job?.jobType}</Badge>
+                <Badge className={'font-bold border-border/60 bg-background/40 backdrop-blur text-xs'} variant="outline">{job?.salary}LPA</Badge>
             </div>
 
         </div>

@@ -35,15 +35,15 @@ const FilterCard = () => {
             <RadioGroup value={selectedValue} onValueChange={changeHandler}>
                 {
                     fitlerData.map((data, index) => (
-                        <div>
-                            <h1 className='font-bold text-lg'>{data.fitlerType}</h1>
+                        <div key={index}>
+                            <h1 className='font-bold text-base md:text-lg'>{data.fitlerType}</h1>
                             {
                                 data.array.map((item, idx) => {
                                     const itemId = `id${index}-${idx}`
                                     return (
-                                        <div className='flex items-center space-x-2 my-2'>
+                                        <div key={idx} className='flex items-center space-x-2 my-2'>
                                             <RadioGroupItem value={item} id={itemId} className="border-accent text-accent" />
-                                            <Label htmlFor={itemId} className="text-foreground">{item}</Label>
+                                            <Label htmlFor={itemId} className="text-foreground text-sm md:text-base">{item}</Label>
                                         </div>
                                     )
                                 })
