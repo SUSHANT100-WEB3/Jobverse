@@ -19,7 +19,8 @@ app.use(cookieParser());
 const allowedOrigins = [
   "http://localhost:5173",
   "https://jobverse-eight.vercel.app",
-  "https://jobverse-v9w9.onrender.com"
+  "https://jobverse-v9w9.onrender.com",
+  "https://jobverse-v1kv.vercel.app"
 ];
 
 app.use(
