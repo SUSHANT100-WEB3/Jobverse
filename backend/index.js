@@ -15,20 +15,21 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
+// ✅ Fixed: removed extra spaces
 const allowedOrigins = [
-  "http://localhost:5173",  // for local dev
-  "https://jobverse-eight.vercel.app" // for production
+  "http://localhost:5173",
+  "https://jobverse-eight.vercel.app",
+  "https://jobverse-v9w9.onrender.com"
 ];
 
 app.use(
   cors({
     origin: function (origin, callback) {
-      // allow requests with no origin (like mobile apps or curl)
-      if (!origin) return callback(null, true);
+      if (!origin) return callback(null, true); // for Postman, curl, etc.
       if (allowedOrigins.includes(origin)) {
-        return callback(null, true);
+        callback(null, true);
       } else {
-        return callback(new Error("Not allowed by CORS"));
+        callback(new Error("Not allowed by CORS"));
       }
     },
     credentials: true,
