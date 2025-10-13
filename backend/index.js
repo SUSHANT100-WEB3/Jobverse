@@ -15,10 +15,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
+// Add this BEFORE all routes
+app.options("*", cors()); // Enable pre-flight for all routes
+
 // ✅ Fixed: removed extra spaces
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://jobverse-eight.vercel.app",
+  // "https://jobverse-eight.vercel.app",
   "https://jobverse-v9w9.onrender.com",
   "https://jobverse-v1kv.vercel.app"
 ];
