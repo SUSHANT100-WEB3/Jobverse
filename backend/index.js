@@ -18,8 +18,8 @@ app.use(cookieParser());
 // ✅ Remove trailing spaces from origins
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://jobverse-v9w9.onrender.com",
-  "https://jobverse-v1kv.vercel.app"
+  "https://jobverse-hpyy.onrender.com",
+  "https://jobverse-gold.vercel.app/"
 ];
 
 app.use(
